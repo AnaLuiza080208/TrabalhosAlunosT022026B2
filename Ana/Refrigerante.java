@@ -1,4 +1,3 @@
-package Principal;
 
 public class Refrigerante {
 
@@ -42,12 +41,16 @@ public class Refrigerante {
 	}
 
 	public void comprar() {
-		if (estoque > 0) {
-			estoque--;
-			dinheiro += preco;
-			System.out.println("Compra realizada com sucesso!");
-		} else {
-			System.out.println("Estoque esgotado!");
-		}
-	}
+    if (estoque > 0) {
+        estoque--;
+        dinheiro += preco;
+        System.out.println("Compra realizada com sucesso!");
+    } else {
+        System.out.println("Estoque esgotado!");
+    }
+
+    System.out.println("Estoque disponível: " + estoque);
+    System.out.println("Preço do refrigerante: R$ " + preco);
+    System.out.println("Dinheiro arrecadado: R$ " + String.format("%.2f", dinheiro));
+}
 }

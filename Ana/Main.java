@@ -1,4 +1,3 @@
-package Principal;
 
 import java.util.Scanner;
 
@@ -29,8 +28,50 @@ public class Main {
             refrigerante.comprar();
             
         }else if(opcao == 3) {
+     
 
-      }
-      
+    Campeonato timeA = new Campeonato("Time A", 1, 0, 0, 0);
+    Campeonato timeB = new Campeonato("Time B", 0, 5, 0, 0);
+
+    timeA.registrarVitoria();
+    timeA.registrarVitoria();
+    timeA.registrarEmpate();
+
+    timeB.registrarVitoria();
+    timeB.registrarEmpate();
+    timeB.registrarDerrota();
+
+    timeA.exibirEstatisticas();
+    timeB.exibirEstatisticas();
+
+    if (timeA.getPontos() > timeB.getPontos()) {
+        System.out.println("Time A ganhou");
+    } else if (timeB.getPontos() > timeA.getPontos()) {
+        System.out.println("Time B ganhou");
+    } else {
+        System.out.println("Houve um empate ");
     }
+
+}else if(opcao == 4) {
+           Cofrinho cofrinho = new Cofrinho();
+           cofrinho.setMeta(50.0);
+           cofrinho.depositar(10.0);
+           cofrinho.depositar(5.0);
+           cofrinho.retirar(20.0);
+           cofrinho.exibirSaldo();
+           cofrinho.verificarMeta();
+           
+} else if (opcao == 5) {
+            Pedido pedido = new Pedido();
+            pedido.setNome("Ana");
+            pedido.adicionarLanches(2);
+            pedido.adicionarLanches(1);
+            pedido.exibirPedido();
+            pedido.calcularTotal();
+            pedido.finalizarPedido();
+            pedido.adicionarLanches(1);
+            pedido.exibirPedido();
+        }
+   }
 }
+
