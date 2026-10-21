@@ -2,8 +2,8 @@ package Principal;
 
 public class Refrigerante {
 
-    private int estoque;
-    private double preco;
+    private int estoque = 10;
+    private double preco = 4.50;
     private double dinheiro;
     
     public Refrigerante() {
@@ -39,5 +39,15 @@ public class Refrigerante {
 
 	public void setDinheiro(double dinheiro) {
 		this.dinheiro = dinheiro;
+	}
+
+	public void comprar() {
+		if (estoque > 0) {
+			estoque--;
+			dinheiro += preco;
+			System.out.println("Compra realizada com sucesso!");
+		} else {
+			System.out.println("Estoque esgotado!");
+		}
 	}
 }

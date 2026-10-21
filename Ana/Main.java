@@ -25,8 +25,11 @@ public class Main {
     	  carro.exibirResumo();
     	  
       }else if(opcao == 2) {
-    	  
-    	  
+            Refrigerante refrigerante = new Refrigerante();
+            refrigerante.comprar();
+            
+        }else if(opcao == 3) {
+
       }
       
     }
